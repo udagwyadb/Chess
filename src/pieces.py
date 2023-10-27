@@ -224,7 +224,7 @@ class setup(Game_State):
             temp_y = int(OBJ_STORER.position[-1])
             
             legal = list(product([temp_x-1, temp_x+1],[temp_y-2, temp_y+2])) + list(product([temp_x-2,temp_x+2],[temp_y-1,temp_y+1]))
-            legal = [(temp_x,temp_y) for temp_x,temp_y in legal if temp_x >= 0 and temp_y >= 0 and temp_x < 8 and temp_y < 8]
+            legal = [(temp_x,temp_y) for temp_x,temp_y in legal if temp_x >= 0 and temp_y >= 0 and temp_x <= 8 and temp_y <= 8]
             
             
             x = self.convert_to_alpha(x)
